@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Radha's Catering</title>
+  <link rel="stylesheet" href="app.css"/>
+</head>
+<body>
+
+<header class="hero">
+  <nav class="navbar">
+    
+    <h1 class="logo">
+      <img src="/images/Logo.jpg" alt="" class="logo-image" />
+      Radha's Kitchen
+    </h1>
+    <ul>
+      <li><a href="#" (click)="scrollToSection('hero', $event)">Home</a></li>
+      <li><a href="#" (click)="scrollToSection('menu', $event)">Menu</a></li>
+      <li><a href="#" (click)="scrollToSection('about', $event)">About</a></li>
+      <li><a href="#" (click)="scrollToSection('contact', $event)">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-content">
+    <h2>Luxury Catering Experience</h2>
+    <p>Curated dining for elite events & unforgettable moments</p>
+    <button (click)="scrollToSection('menu')">Explore Menu</button>
+  </div>
+</header>
+
+<section id="menu" class="menu">
+  <h2>Signature Dishes</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop" alt="Vegetarian Platter">
+        <span class="badge veg">🌱 Vegetarian</span>
+      </div>
+      <h3>Royal Platter</h3>
+      <p>Exquisite multi-course gourmet experience with fresh vegetables</p>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=400&h=300&fit=crop" alt="Non-Vegetarian Fusion">
+        <span class="badge non-veg">🍖 Non-Vegetarian</span>
+      </div>
+      <h3>Fusion Delight</h3>
+      <p>Modern global cuisine with artistic flair and premium proteins</p>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=300&fit=crop" alt="Heritage Dishes">
+        <span class="badge veg">🌱 Vegetarian</span>
+      </div>
+      <h3>Classic Heritage</h3>
+      <p>Authentic flavors crafted to perfection with traditional recipes</p>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=300&fit=crop" alt="Dessert Platter">
+        <span class="badge veg">🌱 Vegetarian</span>
+      </div>
+      <h3>Dessert Symphony</h3>
+      <p>Indulgent selection of artisanal desserts and sweet treats</p>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&h=300&fit=crop" alt="Seafood Delight">
+        <span class="badge non-veg">🍖 Non-Vegetarian</span>
+      </div>
+      <h3>Seafood Extravaganza</h3>
+      <p>Fresh seafood dishes with international flavors</p>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop" alt="Beverage Collection">
+        <span class="badge veg">🥤 Vegetarian</span>
+      </div>
+      <h3>Beverage Collection</h3>
+      <p>Curated selection of fine wines, cocktails, and non-alcoholic beverages</p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h2>About Radha's Catering Service</h2>
+  <div class="about-content">
+    <div class="about-text">
+      <h3>Welcome to Radha's Kitchen</h3>
+      <p>
+        Radha's Catering Service is a premier catering provider based in Warangal, Telangana, 
+        dedicated to delivering exceptional dining experiences for all occasions. With over a decade 
+        of experience in the catering industry, we specialize in creating memorable events through 
+        exquisite cuisine and impeccable service.
+      </p>
+      
+      <div class="about-features">
+        <div class="feature">
+          <span class="feature-icon">👨‍🍳</span>
+          <h4>Expert Chefs</h4>
+          <p>Our skilled team of professional chefs brings creativity and precision to every dish</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🥘</span>
+          <h4>Diverse Menu</h4>
+          <p>Offering both vegetarian and non-vegetarian cuisines with authentic flavors</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🎉</span>
+          <h4>All Occasions</h4>
+          <p>Perfect for weddings, corporate events, parties, and private celebrations</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">✨</span>
+          <h4>Quality Service</h4>
+          <p>Professional presentation and courteous staff for an unforgettable experience</p>
+        </div>
+      </div>
+      
+      <p class="about-highlight">
+        We pride ourselves on using fresh, premium ingredients and maintaining the highest standards 
+        of hygiene and quality. Every event is customized to meet your specific needs and preferences.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="contact" class="contact">
+  <h2>Book Your Event</h2>
+  <div class="contact-container">
+    <div class="contact-form-section">
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required/>
+        <input type="email" id="email" placeholder="Email" required/>
+        <textarea id="eventDetails" placeholder="Event Details" required></textarea>
+        <button type="button" (click)="submitContactForm()" class="submit-btn">Request Quote</button>
+        <div id="formMessage" class="form-message"></div>
+      </form>
+    </div>
+    
+    <div class="contact-details-section">
+      <div class="contact-info">
+        <h3>Get In Touch</h3>
+        
+        <div class="info-item">
+          <span class="info-label">📍 Location:</span>
+          <p>Radha's Kitchen Catering Service <br/>Hanamkonda,Warangal & Kazipet <br/>Warangal City, Telangana</p>
+        </div>
+        
+        <div class="info-item">
+          <span class="info-label">📞 Phone:</span>
+          <p>+91 7981030850</p>
+        </div>
+        
+        <div class="info-item">
+          <span class="info-label">✉️ Email:</span>
+          <p>radhaskitchenwgl@gmail.com</p>
+        </div>
+        
+        <div class="info-item">
+          <span class="info-label">🕐 Hours:</span>
+          <p>Mon-Fri: 10:00 AM - 6:00 PM<br/>Sat-Sun: 12:00 PM - 8:00 PM</p>
+        </div>
+        
+        <div class="whatsapp-connect">
+          <a href="https://wa.me/7981030850?text=Hello%20Radha%27s%20Kitchen%2C%20I%20am%20interested%20in%20your%20services" target="_blank" class="whatsapp-btn">
+            <span>💬</span> Connect on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <div class="map-container">
+    <iframe src="https://maps.google.com/maps?q=Warangal,%20Telangana&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+</section>
+
+<footer>
+  <p>© 2026 Radha's Catering Service. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+<router-outlet />
